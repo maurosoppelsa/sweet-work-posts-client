@@ -1,0 +1,29 @@
+{
+  "name": "sweet-work-posts-client",
+  "version": "1.0.0",
+  "description": "Posts and Authors client App",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "install": "typings install"
+  },
+  "author": "Mauro Soppelsa",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-preset-es2015": "^6.16.0",
+    "browser-sync": "^2.17.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-webserver": "^0.9.1",
+    "path": "^0.12.7",
+    "typings": "^1.4.0"
+  }
+}

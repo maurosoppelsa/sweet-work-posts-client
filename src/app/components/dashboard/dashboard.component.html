@@ -1,0 +1,62 @@
+<div class="container-fluid">
+<div class="row">
+<div class="dashboard">
+  <div class="col-md-6">
+    <div ng-if="$ctrl.isAuthorSelected">
+            <button class="btn" ng-click="$ctrl.backToPaginatedtList()">Back</button>
+            <div class="author--posts__container">
+                    <ul>
+                        <li ng-if="authorPosts" class="author--posts__items" ng-repeat="item in authorPosts">
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.description}}</p>
+                            <p>{{item.date}}</p>
+                        </li>
+                        <h3 ng-if="!authorPosts">No posts to show</h3>
+                    </ul>
+                </div>
+    </div>    
+    <div ng-if="!$ctrl.isAuthorSelected">    
+  <div class="paginator--container">    
+  <ul>
+          <li class="paginator--items" ng-repeat="item in posts">
+            <i class="glyphicon glyphicon-user"></i>  
+            <span class="paginator--item__author">{{item.author.name}}</span>
+              - <span class="paginator--item__author">{{item.author.email}}</span>
+              <h3 class="paginator--item__title">{{item.title}}</h3>
+              <p class="paginator--item__desc">{{item.description}}</p>
+              <p class="paginator--item__date">{{item.date}}</p>
+              <hr class="separator">
+          </li>
+      </ul>
+  </div>
+      <button class="btn" ng-disabled="currentPage == 1" 
+      ng-click="currentPage=currentPage-1;getpaginatedPosts(currentPage,pageSize)">
+          Previous
+      </button>
+      {{currentPage}}/{{$ctrl.numberOfPages(totalPosts, pageSize)}}
+      <button class="btn" ng-disabled="currentPage >= numberOfPages(totalPosts, pageSize)" 
+          ng-click="currentPage=currentPage+1;getpaginatedPosts(currentPage,pageSize)">
+          Next
+      </button>
+    </div>
+</div>
+    <div class="col-md-6">
+      <ul>
+          <h3>Authors:</h3>
+          <li class="author--items" ng-repeat="item in authors" ng-click="$ctrl.selectAuthor(item.id)">
+              <i class="glyphicon glyphicon-user icon-author"></i><span><b>Name: </b></span><span>{{item.name}}</span>
+              <span><b>Email: </b></span><span>{{item.email}}</span>
+              <span><b>Birthday: </b></span><span>{{item.birthday}}</span>  
+          </li>
+      </ul>
+      <div class="search-container">
+      <input 
+      ng-model="search.model" 
+      type="text" class="input--search" 
+      placeholder="search by title">
+      <button ng-click="$ctrl.getPostsByTitle(search.model)" class="btn">Search</button>
+    </div>
+    </div>
+</div>
+</div>
+</div>

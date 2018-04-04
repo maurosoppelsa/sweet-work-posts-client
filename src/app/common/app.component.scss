@@ -1,0 +1,14 @@
+@import '../variables';
+
+div{
+  padding: 10px;
+}
+
+.app{
+  color: $basic-black;
+  background: $basic-background;
+}
+
+.root{
+  background: $basic-background;
+}

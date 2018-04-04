@@ -1,0 +1,54 @@
+@import '../../variables';
+
+.dashboard{
+  color: $basic-black;
+  background: $basic-background;
+}
+.paginator--container {
+  height: auto;
+  width: auto;
+  border: 1px solid;
+  margin-bottom: 10px;
+}
+.paginator--items {
+  list-style-type: none;
+}
+.paginator--item__title {
+  background-color: sandybrown;
+  width: 50%;
+  text-align: center
+}
+.paginator--item__date {
+  color: $basic-grey;
+}
+.paginator--item__author {
+  color: royalblue;
+  padding: 3px;
+}
+.author--items {
+  list-style-type: none;
+  padding: 15px;
+  border: 1px solid;
+  cursor: pointer;
+}
+.author--items:hover {
+  background-color: $basic-grey;
+  color: white;
+}
+.icon-author {
+  padding-right: 10px;
+}
+.author--posts__items {
+  list-style-type: none;
+  list-style-type: none;
+  border: 1px solid;
+  padding: 15px;
+  background-color: antiquewhite;
+}
+.search-container {
+  text-align: center;
+}
+.input--search {
+  padding-left: 15px;
+  font-size: 18px;
+}
